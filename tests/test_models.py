@@ -1,8 +1,8 @@
 from app.models import Author
 
+from .factories import AuthorFactory
+
 
 def test_author(db):
-    author = Author(username='author')
-    db.session.add(author)
-    db.session.commit()
-    assert Author.query.first().username == 'author'
+    author = AuthorFactory()
+    assert Author.query.first().username
