@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from app import db
+from .database import db
 
 
 class Author(db.Model):
