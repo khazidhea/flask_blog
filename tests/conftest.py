@@ -16,7 +16,7 @@ def client(app):
     return app.test_client()
 
 
-@pytest.yield_fixture
+@pytest.yield_fixture(autouse=True)
 def db(app):
     _db.app = app
     with app.app_context():
